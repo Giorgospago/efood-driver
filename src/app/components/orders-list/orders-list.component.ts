@@ -1,14 +1,15 @@
 import { Component, inject } from '@angular/core';
 import { OrderService } from '../../services/order.service';
-import { CurrencyPipe, DecimalPipe, JsonPipe } from '@angular/common';
+import { CurrencyPipe, DatePipe, DecimalPipe, JsonPipe } from '@angular/common';
 import { NgIcon } from '@ng-icons/core';
 import { SweetAlert2Module } from '@sweetalert2/ngx-sweetalert2';
 import { Router } from '@angular/router';
+import { TimeFromNowPipe } from '../../pipes/time-from-now.pipe';
 
 @Component({
   selector: 'app-orders-list',
   imports: [
-    JsonPipe,
+    TimeFromNowPipe,
     NgIcon,
     CurrencyPipe,
     DecimalPipe,
