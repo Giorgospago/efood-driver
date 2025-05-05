@@ -2,6 +2,7 @@ import { Component } from '@angular/core';
 import { RouterOutlet } from '@angular/router';
 import { provideIcons } from '@ng-icons/core';
 import * as heroicons from '@ng-icons/heroicons/outline';
+import { Socket } from 'ngx-socket-io';
 
 @Component({
   selector: 'app-root',
@@ -13,5 +14,4 @@ import * as heroicons from '@ng-icons/heroicons/outline';
   ],
 })
 export class AppComponent {
-  title = 'efood-driver';
 }

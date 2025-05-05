@@ -1,10 +1,14 @@
-import { Injectable } from '@angular/core';
+import { inject, Injectable } from '@angular/core';
 import { Geolocation } from '@capacitor/geolocation';
+import { Socket } from 'ngx-socket-io';
+import { AuthService } from './auth.service';
 
 @Injectable({
   providedIn: 'root'
 })
 export class LocationService {
+  public socket = inject(Socket);
+  public auth = inject(AuthService);
 
   public locationGranted = false;
   public location = {
@@ -53,5 +57,11 @@ export class LocationService {
     this.locationGranted = true;
 
     localStorage.setItem('location', JSON.stringify(this.location));
+
+    this.socket.emit('driver-location', {
+      driver_id: this.auth.user?.id,
+      latitude: this.location.latitude,
+      longitude: this.location.longitude
+    });
   }
 }

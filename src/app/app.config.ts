@@ -7,6 +7,7 @@ import { httpInterceptor } from './interceptors/httpInterceptor';
 import { SweetAlert2Module } from '@sweetalert2/ngx-sweetalert2';
 import { GoogleMapsModule } from '@angular/google-maps';
 import environment from '../environments/environment';
+import { SocketIoModule } from 'ngx-socket-io';
 
 export const appConfig: ApplicationConfig = {
   providers: [
@@ -20,7 +21,11 @@ export const appConfig: ApplicationConfig = {
     { provide: DEFAULT_CURRENCY_CODE, useValue: 'EUR' },
     importProvidersFrom(
       SweetAlert2Module.forRoot({}),
-      GoogleMapsModule
+      GoogleMapsModule,
+      SocketIoModule.forRoot({
+        url: environment.socketUrl,
+        options: {}
+      })
     )
   ]
 };
