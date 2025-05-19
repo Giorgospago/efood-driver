@@ -5,3 +5,7 @@
     @extend .animate__bounce;
     @extend .animate__infinite;
 }
+
+:host {
+    display: block;
+}

@@ -1,7 +1,7 @@
 @import "tailwindcss";
 @import 'animate.css/animate.min';
 @plugin "daisyui" {
-    themes: efood;
+    themes: efood --default;
 };
 @plugin "daisyui/theme" {
     name: "efood";
@@ -40,8 +40,10 @@ html {
     height: 100%;
 }
 body {
-    padding: 0 env(safe-area-inset-right) env(safe-area-inset-bottom) env(safe-area-inset-left);
+    // padding: 0 env(safe-area-inset-right) env(safe-area-inset-bottom) env(safe-area-inset-left);
     height: 100%;
+    padding-top: var(--safe-area-inset-top, env(safe-area-inset-top));
+    padding-bottom: var(--safe-area-inset-bottom, env(safe-area-inset-bottom));
 }
 
 .status-bar {
