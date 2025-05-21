@@ -9,7 +9,8 @@ const config: CapacitorConfig = {
   webDir: 'dist/efood-driver/browser',
   server: {
     // url: "http://192.168.64.1:4200",
-    cleartext: true
+    cleartext: true,
+    androidScheme: 'http',
   },
   plugins: {
     StatusBar: {

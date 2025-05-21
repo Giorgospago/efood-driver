@@ -1,8 +1,8 @@
 const environment = {
   production: true,
-  endpoint: 'https://api.efood.pagonoudis.gr/driver',
+  endpoint: 'http://efood-api.test/driver',
   googleMapsApiKey: 'AIzaSyDDU8PFyo5R2GIJfRWKbrIiu6sDYVVCRTw',
-  socketUrl: 'https://sockets.efood.pagonoudis.gr',
+  socketUrl: 'http://localhost:3033',
 };
 
 export default environment;
