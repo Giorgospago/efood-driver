@@ -1,7 +1,7 @@
 {
   "name": "Driver",
-  "theme_color": "#268517",
-  "background_color": "#e9f4e7",
+  "theme_color": "#0d1529",
+  "background_color": "#0d1529",
   "display": "standalone",
   "orientation": "portrait",
   "scope": "/",
